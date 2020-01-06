@@ -1494,7 +1494,7 @@ sub Pushover_HttpUri ($$;$) {
 
 =pod
 =item device
-=item summary text message push functionality using the Pushover smartphone app
+=item summary Text message push functionality using the Pushover smartphone app
 =item summary_DE Push Funktion f&uuml;r Textnachrichten &uuml;ber die Pushover Smartphone App
 =begin html
 
@@ -1874,6 +1874,14 @@ sub Pushover_HttpUri ($$;$) {
 
 =for :application/json;q=META.json 70_Pushover.pm
 {
+  "abstract": "Text message push functionality using the Pushover smartphone app",
+  "x_lang": {
+    "de": {
+      "abstract": "Push Funktion für Textnachrichten über die Pushover Smartphone App"
+    }
+  },
+  "version": "v2.2.0",
+  "release_status": "stable",
   "author": [
     "Julian Pawlowski <julian.pawlowski@gmail.com>"
   ],
@@ -1887,7 +1895,31 @@ sub Pushover_HttpUri ($$;$) {
     "messaging",
     "messenger",
     "push"
-  ]
+  ],
+  "prereqs": {
+    "runtime": {
+      "requires": {
+        "Data::Dumper": 0,
+        "Encode": 0,
+        "FHEM": 5.00918623,
+        "FHEM::Meta": 0.001006,
+        "HttpUtils": 0,
+        "JSON::PP": 0
+      },
+      "recommends": {
+        "JSON": 0
+      },
+      "suggests": {
+        "Cpanel::JSON::XS": 0,
+        "JSON::XS": 0
+      }
+    }
+  },
+  "resources": {
+    "bugtracker": {
+      "web": "https://github.com/fhem/mod-Pushover/issues"
+    }
+  }
 }
 =end :application/json;q=META.json
 
